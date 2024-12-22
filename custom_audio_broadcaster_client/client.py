@@ -55,7 +55,7 @@ class Client:
         rooms.append(Room(**transformed))
       return rooms
 
-  async def fetch_room_data(self, room: Room) -> str:
+  async def fetch_room_data(self, room: Room):
     if not self._session:
       self._session = aiohttp.ClientSession()
     if not room or not room.dataUrl:
@@ -66,4 +66,4 @@ class Client:
       if resp.status != 200:
         logger.error(f'Response != OK: {resp.status}')
         return
-      return await resp.text()
+      return await resp.json()
