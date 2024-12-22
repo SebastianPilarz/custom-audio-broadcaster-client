@@ -13,8 +13,6 @@ class GstreamerPipeline:
     self.pipeline = Gst.parse_launch(f'playbin uri="{self.uri}"')
 
     self.pipeline.props.flags |= 1 << 3
-    # flags = self.pipeline.props.flags
-    # print(f'Flags: {flags}')
     vis = Gst.ElementFactory.make('spectrascope', 'vis')
     self.pipeline.set_property('vis-plugin', vis)
     gtksink = Gst.ElementFactory.make('gtk4paintablesink', 'sink')
@@ -49,3 +47,6 @@ class GstreamerPipeline:
     caps_filter = Gst.ElementFactory.make('capsfilter', 'capsfilter')
     caps_filter.set_property('caps', video_caps)
     self.pipeline.set_property('video-filter', caps_filter)
+
+  def set_uri(self, uri: str):
+    self.pipeline.set_property('uri', uri)
