@@ -1,0 +1,66 @@
+.background {
+  background-color: transparent;
+}
+
+.view {
+  background-color: transparent;
+}
+
+.audio-controls {
+  padding: 4px;
+}
+
+.visualizer {
+  border-radius: 8px;
+}
+
+.column-header {
+  padding: 4px;
+}
+
+.response-preview textview {
+  background-color: rgb(33, 36, 54);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px 12px 8px 4px;
+  color: rgb(212, 220, 248);
+  font-weight: bold;
+}
+
+.audio-controls highlight {
+  background-color: rgb(198, 160, 246);
+}
+
+.audio-controls slider {
+  background-color: rgb(45, 51, 78);
+}
+
+button {
+  color: rgb(125, 131, 160);
+}
+
+row:selected {
+  background-color: rgb(33, 36, 54);
+}
+
+row:hover {
+  background-color: rgb(33, 36, 54);
+}
+
+scrolledwindow label {
+  color: rgb(212, 220, 248);
+}
+
+entry {
+  color: rgb(125, 131, 160);
+  outline-color: rgb(198, 160, 246);
+  outline-width: 1px;
+}
+
+text selection {
+  background-color: rgba(212, 220, 248, 0.15);
+}
+
+scrollbar slider {
+  background-color: rgba(45, 51, 78, 0.5);
+}
