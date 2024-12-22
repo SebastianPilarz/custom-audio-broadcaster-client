@@ -1,3 +1,9 @@
+# Copyright (C) 2024 seb0xff
+#
+# This program is licensed under the GNU Affero General Public License.
+# You should have received a copy of this license along with this program.
+# If not, see <https://www.gnu.org/licenses/>.
+
 import gi
 
 gi.require_version('Gtk', '4.0')

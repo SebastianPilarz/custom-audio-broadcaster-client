@@ -1,5 +1,12 @@
+# Copyright (C) 2024 seb0xff
+#
+# This program is licensed under the GNU Affero General Public License.
+# You should have received a copy of this license along with this program.
+# If not, see <https://www.gnu.org/licenses/>.
+
 import sys
 import gi
+from typing import Optional
 
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst  # type: ignore
@@ -7,7 +14,7 @@ from gi.repository import Gst  # type: ignore
 
 class GstreamerPipeline:
 
-  def __init__(self, uri: str, width=480, height=480):
+  def __init__(self, uri: Optional[str] = None, width=480, height=480):
     Gst.init(sys.argv[1:])
     self.uri = uri
     self.pipeline = Gst.parse_launch(f'playbin uri="{self.uri}"')
