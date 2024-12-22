@@ -1,7 +1,5 @@
 from dataclasses import dataclass
 from os import path as p
-import asyncio
-import threading
 import aiohttp
 from typing import Optional
 from logger import logger
